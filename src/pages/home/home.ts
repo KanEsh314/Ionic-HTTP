@@ -13,7 +13,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public http: Http) {
 
-  	this.http.get('https://sheetsu.com/apis/v1.0/ac6ca9c83329').map(res => res.json()).subscribe(data => {
+  	this.http.get('https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot').map(res => res.json()).subscribe(data => {
   		this.posts = data.data.children;
   	})
   }
